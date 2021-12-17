@@ -36,20 +36,20 @@ const config: HardhatUserConfig = {
       initialBaseFeePerGas: 0, // to fix : https://github.com/sc-forks/solidity-coverage/issues/652, see https://github.com/sc-forks/solidity-coverage/issues/652#issuecomment-896330136
       // process.env.HARDHAT_FORK will specify the network that the fork is made from.
       // this line ensure the use of the corresponding accounts
-      accounts: accounts(process.env.HARDHAT_FORK),
-      forking: process.env.HARDHAT_FORK
-        ? {
-            // TODO once PR merged : network: process.env.HARDHAT_FORK,
-            url: node_url(process.env.HARDHAT_FORK),
-            blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined,
-          }
-        : undefined,
-      mining: process.env.MINING_INTERVAL
-        ? {
-            auto: false,
-            interval: process.env.MINING_INTERVAL.split(',').map((v) => parseInt(v)) as [number, number],
-          }
-        : undefined,
+      // accounts: accounts(process.env.HARDHAT_FORK),
+      // forking: process.env.HARDHAT_FORK
+      //   ? {
+      //       // TODO once PR merged : network: process.env.HARDHAT_FORK,
+      //       url: node_url(process.env.HARDHAT_FORK),
+      //       blockNumber: process.env.HARDHAT_FORK_NUMBER ? parseInt(process.env.HARDHAT_FORK_NUMBER) : undefined,
+      //     }
+      //   : undefined,
+      // mining: process.env.MINING_INTERVAL
+      //   ? {
+      //       auto: false,
+      //       interval: process.env.MINING_INTERVAL.split(',').map((v) => parseInt(v)) as [number, number],
+      //     }
+      //   : undefined,
     },
     localhost: {
       url: node_url('localhost'),
@@ -71,11 +71,11 @@ const config: HardhatUserConfig = {
       url: node_url('rinkeby'),
       accounts: accounts('rinkeby'),
     },
-    kovan: {
-      url: node_url('kovan'),
-      accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
-                  process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
-    },
+    // kovan: {
+    //   url: node_url('kovan'),
+    //   accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
+    //               process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
+    // },
     goerli: {
       url: node_url('goerli'),
       accounts: accounts('goerli'),
