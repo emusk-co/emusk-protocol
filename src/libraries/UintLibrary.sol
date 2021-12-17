@@ -5,23 +5,23 @@ import "./SafeMath.sol";
 library UintLibrary {
     using SafeMath for uint;
 
-    function toString(uint256 _i) internal pure returns (string memory) {
-        if (_i == 0) {
+    function toString(uint256 value) internal pure returns (string memory) {
+        if (value == 0) {
             return "0";
         }
-        uint256 j = _i;
-        uint256 len;
-        while (j != 0) {
-            len++;
-            j /= 10;
+        uint256 temp = value;
+        uint256 digits;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
         }
-        bytes memory bstr = new bytes(len);
-        uint256 k = len - 1;
-        while (_i != 0) {
-            bstr[k--] = bytes1(uint8(48 + (_i % 10)));
-            _i /= 10;
+        bytes memory buffer = new bytes(digits);
+        while (value != 0) {
+            digits -= 1;
+            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));
+            value /= 10;
         }
-        return string(bstr);
+        return string(buffer);
     }
 
     function bp(uint256 value, uint256 bpValue) internal pure returns (uint256) {
