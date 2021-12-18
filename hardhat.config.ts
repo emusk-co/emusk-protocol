@@ -71,11 +71,11 @@ const config: HardhatUserConfig = {
       url: node_url('rinkeby'),
       accounts: accounts('rinkeby'),
     },
-    // kovan: {
-    //   url: node_url('kovan'),
-    //   accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
-    //               process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
-    // },
+    kovan: {
+      url: node_url('kovan'),
+      accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
+                  process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
+    },
     goerli: {
       url: node_url('goerli'),
       accounts: accounts('goerli'),
