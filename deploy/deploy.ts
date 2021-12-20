@@ -57,6 +57,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
   });
 
+  const Emusk = await deploy('Emusk', {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
 };
 export default func;
 func.tags = ['all'];

@@ -80,6 +80,14 @@ const config: HardhatUserConfig = {
       url: node_url('goerli'),
       accounts: accounts('goerli'),
     },
+    bsc: {
+      url: process.env.BSC_NODE_URI,
+      chainId: 56,
+      gasPrice: 56000000000,
+      accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
+                  process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
+    }
+    
   },
   etherscan: {
     // Your API key for Etherscan

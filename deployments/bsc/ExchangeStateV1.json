@@ -1,0 +1,506 @@
+{
+  "address": "0x13A60E9AB67b629A8c2499865d77f3c7B28F1DB7",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "completed",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salt",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "sellAsset",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "buyAsset",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct ExchangeDomainV1.OrderKey",
+          "name": "key",
+          "type": "tuple"
+        }
+      ],
+      "name": "getCompleted",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salt",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "sellAsset",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "buyAsset",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct ExchangeDomainV1.OrderKey",
+          "name": "key",
+          "type": "tuple"
+        }
+      ],
+      "name": "getCompletedKey",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isOperator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salt",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "sellAsset",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "enum ExchangeDomainV1.AssetType",
+                  "name": "assetType",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct ExchangeDomainV1.Asset",
+              "name": "buyAsset",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct ExchangeDomainV1.OrderKey",
+          "name": "key",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newCompleted",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCompleted",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9b056f7da4bbf313a9da8daa818401d5618de4b2d2b9d77ac1f8b6a1680f51c5",
+  "receipt": {
+    "to": null,
+    "from": "0xAEFaf0D3716431417Af27d0d736f71b3CcF507a6",
+    "contractAddress": "0x13A60E9AB67b629A8c2499865d77f3c7B28F1DB7",
+    "transactionIndex": 0,
+    "gasUsed": "627954",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000420000000000000000000800000090000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000022000000000000000000000000000000000000000000020000000000000000000000",
+    "blockHash": "0x861cdf568a82f9d06cb52117dd450f45943aae888a2c8de8e010ecb6ce39b2dd",
+    "transactionHash": "0x9b056f7da4bbf313a9da8daa818401d5618de4b2d2b9d77ac1f8b6a1680f51c5",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 13636194,
+        "transactionHash": "0x9b056f7da4bbf313a9da8daa818401d5618de4b2d2b9d77ac1f8b6a1680f51c5",
+        "address": "0x13A60E9AB67b629A8c2499865d77f3c7B28F1DB7",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000aefaf0d3716431417af27d0d736f71b3ccf507a6"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x861cdf568a82f9d06cb52117dd450f45943aae888a2c8de8e010ecb6ce39b2dd"
+      }
+    ],
+    "blockNumber": 13636194,
+    "cumulativeGasUsed": "627954",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "d6e83a1dd9b505d6d59703f04dc2089b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OperatorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OperatorRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"completed\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"sellAsset\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"buyAsset\",\"type\":\"tuple\"}],\"internalType\":\"struct ExchangeDomainV1.OrderKey\",\"name\":\"key\",\"type\":\"tuple\"}],\"name\":\"getCompleted\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"sellAsset\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"buyAsset\",\"type\":\"tuple\"}],\"internalType\":\"struct ExchangeDomainV1.OrderKey\",\"name\":\"key\",\"type\":\"tuple\"}],\"name\":\"getCompletedKey\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isOperator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"salt\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"sellAsset\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"enum ExchangeDomainV1.AssetType\",\"name\":\"assetType\",\"type\":\"uint8\"}],\"internalType\":\"struct ExchangeDomainV1.Asset\",\"name\":\"buyAsset\",\"type\":\"tuple\"}],\"internalType\":\"struct ExchangeDomainV1.OrderKey\",\"name\":\"key\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"newCompleted\",\"type\":\"uint256\"}],\"name\":\"setCompleted\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/marketplace/ExchangeStateV1.sol\":\"ExchangeStateV1\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":2000},\"remappings\":[]},\"sources\":{\"src/common/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\n// OpenZeppelin Contracts v4.3.2 (utils/Context.sol)\\r\\n\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev Provides information about the current execution context, including the\\r\\n * sender of the transaction and its data. While these are generally available\\r\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\r\\n * manner, since when dealing with meta-transactions the account sending and\\r\\n * paying for execution may not be the actual sender (as far as an application\\r\\n * is concerned).\\r\\n *\\r\\n * This contract is only required for intermediate, library-like contracts.\\r\\n */\\r\\nabstract contract Context {\\r\\n    function _msgSender() internal view virtual returns (address) {\\r\\n        return msg.sender;\\r\\n    }\\r\\n\\r\\n    function _msgData() internal view virtual returns (bytes calldata) {\\r\\n        return msg.data;\\r\\n    }\\r\\n}\",\"keccak256\":\"0xe6b0fd58ddc810aa58acc8e1ca5f29469775c74adb950df6afaa9e573a9162cf\",\"license\":\"MIT\"},\"src/common/Ownable.sol\":{\"content\":\"\\r\\n// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\nimport \\\"./Context.sol\\\";\\r\\n/**\\r\\n * @dev Contract module which provides a basic access control mechanism, where\\r\\n * there is an account (an owner) that can be granted exclusive access to\\r\\n * specific functions.\\r\\n *\\r\\n * By default, the owner account will be the one that deploys the contract. This\\r\\n * can later be changed with {transferOwnership}.\\r\\n *\\r\\n * This module is used through inheritance. It will make available the modifier\\r\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\r\\n * the owner.\\r\\n */\\r\\nabstract contract Ownable is Context {\\r\\n    address private _owner;\\r\\n\\r\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\r\\n\\r\\n    /**\\r\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\r\\n     */\\r\\n    constructor() {\\r\\n        _transferOwnership(_msgSender());\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Returns the address of the current owner.\\r\\n     */\\r\\n    function owner() public view virtual returns (address) {\\r\\n        return _owner;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Throws if called by any account other than the owner.\\r\\n     */\\r\\n    modifier onlyOwner() {\\r\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Leaves the contract without owner. It will not be possible to call\\r\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\r\\n     *\\r\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\r\\n     * thereby removing any functionality that is only available to the owner.\\r\\n     */\\r\\n    function renounceOwnership() public virtual onlyOwner {\\r\\n        _transferOwnership(address(0));\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\r\\n     * Can only be called by the current owner.\\r\\n     */\\r\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\r\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\r\\n        _transferOwnership(newOwner);\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\r\\n     * Internal function without access restriction.\\r\\n     */\\r\\n    function _transferOwnership(address newOwner) internal virtual {\\r\\n        address oldOwner = _owner;\\r\\n        _owner = newOwner;\\r\\n        emit OwnershipTransferred(oldOwner, newOwner);\\r\\n    }\\r\\n}\",\"keccak256\":\"0xa9a56e77d7f26f4dec5a5794c387ff70bcb2906e4a507dac5b00d600f4f66131\",\"license\":\"MIT\"},\"src/common/roles/OperatorRole.sol\":{\"content\":\"\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\nimport \\\"../Context.sol\\\";\\nimport \\\"../../libraries/Roles.sol\\\";\\nabstract contract OperatorRole is Context {\\n    using Roles for Roles.Role;\\n\\n    event OperatorAdded(address indexed account);\\n    event OperatorRemoved(address indexed account);\\n\\n    Roles.Role private _operators;\\n\\n    constructor() {\\n\\n    }\\n\\n    modifier onlyOperator() {\\n        require(isOperator(_msgSender()), \\\"OperatorRole: caller does not have the Operator role\\\");\\n        _;\\n    }\\n\\n    function isOperator(address account) public view returns (bool) {\\n        return _operators.has(account);\\n    }\\n\\n    function _addOperator(address account) internal {\\n        _operators.add(account);\\n        emit OperatorAdded(account);\\n    }\\n\\n    function _removeOperator(address account) internal {\\n        _operators.remove(account);\\n        emit OperatorRemoved(account);\\n    }\\n}\",\"keccak256\":\"0xd240f99bb1af4805d493b30ddb424e2d71b1d059096f0f132c9d464a5b5360fb\",\"license\":\"MIT\"},\"src/common/roles/OwnableOperatorRole.sol\":{\"content\":\"\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\nimport \\\"../Ownable.sol\\\";\\nimport \\\"./OperatorRole.sol\\\";\\ncontract OwnableOperatorRole is Ownable, OperatorRole {\\n    function addOperator(address account) external onlyOwner {\\n        _addOperator(account);\\n    }\\n\\n    function removeOperator(address account) external onlyOwner {\\n        _removeOperator(account);\\n    }\\n}\",\"keccak256\":\"0xbde2b3e5cab378d11dba2f62e2b1481392817171bf00aa5c69d32bb87a3b773b\",\"license\":\"MIT\"},\"src/libraries/Roles.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n/**\\r\\n * @title Roles\\r\\n * @dev Library for managing addresses assigned to a Role.\\r\\n */\\r\\nlibrary Roles {\\r\\n    struct Role {\\r\\n        mapping (address => bool) bearer;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Give an account access to this role.\\r\\n     */\\r\\n    function add(Role storage role, address account) internal {\\r\\n        require(!has(role, account), \\\"Roles: account already has role\\\");\\r\\n        role.bearer[account] = true;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Remove an account's access to this role.\\r\\n     */\\r\\n    function remove(Role storage role, address account) internal {\\r\\n        require(has(role, account), \\\"Roles: account does not have role\\\");\\r\\n        role.bearer[account] = false;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @dev Check if an account has this role.\\r\\n     * @return bool\\r\\n     */\\r\\n    function has(Role storage role, address account) internal view returns (bool) {\\r\\n        require(account != address(0), \\\"Roles: account is the zero address\\\");\\r\\n        return role.bearer[account];\\r\\n    }\\r\\n}\",\"keccak256\":\"0xd485e0ad64876b7ca593d3c20a2c84f3a80aecf74147108bc5d92dd55d573980\",\"license\":\"MIT\"},\"src/marketplace/ExchangeDomainV1.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\ncontract ExchangeDomainV1 {\\n\\n    enum AssetType {ETH, ERC20, ERC1155, ERC721, ERC721Deprecated}\\n\\n    struct Asset {\\n        address token;\\n        uint tokenId;\\n        AssetType assetType;\\n    }\\n\\n    struct OrderKey {\\n        /* who signed the order */\\n        address owner;\\n        /* random number */\\n        uint salt;\\n\\n        /* what has owner */\\n        Asset sellAsset;\\n\\n        /* what wants owner */\\n        Asset buyAsset;\\n    }\\n\\n    struct Order {\\n        OrderKey key;\\n\\n        /* how much has owner (in wei, or UINT256_MAX if ERC-721) */\\n        uint selling;\\n        /* how much wants owner (in wei, or UINT256_MAX if ERC-721) */\\n        uint buying;\\n\\n        /* fee for selling */\\n        uint sellerFee;\\n    }\\n\\n    /* An ECDSA signature. */\\n    struct Sig {\\n        /* v parameter */\\n        uint8 v;\\n        /* r parameter */\\n        bytes32 r;\\n        /* s parameter */\\n        bytes32 s;\\n    }\\n}\",\"keccak256\":\"0x51e298adbbfc19079e8ec6c8526f6a34c48d73010c9f6366e481df9cc938552d\",\"license\":\"MIT\"},\"src/marketplace/ExchangeStateV1.sol\":{\"content\":\"\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\npragma experimental ABIEncoderV2;\\nimport \\\"../common/roles/OwnableOperatorRole.sol\\\";\\nimport \\\"./ExchangeDomainV1.sol\\\";\\ncontract ExchangeStateV1 is OwnableOperatorRole {\\n\\n    // keccak256(OrderKey) => completed\\n    mapping(bytes32 => uint256) public completed;\\n\\n    function getCompleted(ExchangeDomainV1.OrderKey calldata key) view external returns (uint256) {\\n        return completed[getCompletedKey(key)];\\n    }\\n\\n    function setCompleted(ExchangeDomainV1.OrderKey calldata key, uint256 newCompleted) external onlyOperator {\\n        completed[getCompletedKey(key)] = newCompleted;\\n    }\\n\\n    function getCompletedKey(ExchangeDomainV1.OrderKey memory key) pure public returns (bytes32) {\\n        return keccak256(abi.encodePacked(key.owner, key.sellAsset.token, key.sellAsset.tokenId, key.buyAsset.token, key.buyAsset.tokenId, key.salt));\\n    }\\n}\",\"keccak256\":\"0x52d8526f0c5aff8873743ec35d5eb72d67be606f3432ac548381359a9cd95b44\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061001a3361001f565b61006f565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b610a018061007e6000396000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c8063ac8a584a11610076578063f2fde38b1161005b578063f2fde38b146101f7578063f6419d961461020a578063fb0000c01461022a57600080fd5b8063ac8a584a14610136578063dc10fb0a1461014957600080fd5b8063715018a6116100a7578063715018a6146101005780638da5cb5b146101085780639870d7fe1461012357600080fd5b80633a076e9a146100c35780636d70f7ae146100d8575b600080fd5b6100d66100d13660046107f4565b61023d565b005b6100eb6100e636600461083d565b6102e9565b60405190151581526020015b60405180910390f35b6100d66102fc565b6000546040516001600160a01b0390911681526020016100f7565b6100d661013136600461083d565b610362565b6100d661014436600461083d565b6103c8565b6101e96101573660046108f5565b805160408083015180516020918201516060808701518051908501519785015186517fffffffffffffffffffffffffffffffffffffffff00000000000000000000000098841b89168188015294831b881660348601526048850193909352901b9094166068820152607c810194909452609c808501939093528151808503909301835260bc9093019052805191012090565b6040519081526020016100f7565b6100d661020536600461083d565b61042b565b6101e9610218366004610995565b60026020526000908152604090205481565b6101e96102383660046109ae565b61050a565b610246336102e9565b6102bd5760405162461bcd60e51b815260206004820152603460248201527f4f70657261746f72526f6c653a2063616c6c657220646f6573206e6f7420686160448201527f766520746865204f70657261746f7220726f6c6500000000000000000000000060648201526084015b60405180910390fd5b80600260006102d4610157368790038701876108f5565b81526020810191909152604001600020555050565b60006102f6600183610537565b92915050565b6000546001600160a01b031633146103565760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b61036060006105d5565b565b6000546001600160a01b031633146103bc5760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6103c58161063d565b50565b6000546001600160a01b031633146104225760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6103c58161067f565b6000546001600160a01b031633146104855760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6001600160a01b0381166105015760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016102b4565b6103c5816105d5565b6000600281610521610157368690038601866108f5565b8152602001908152602001600020549050919050565b60006001600160a01b0382166105b55760405162461bcd60e51b815260206004820152602260248201527f526f6c65733a206163636f756e7420697320746865207a65726f20616464726560448201527f737300000000000000000000000000000000000000000000000000000000000060648201526084016102b4565b506001600160a01b03166000908152602091909152604090205460ff1690565b600080546001600160a01b038381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6106486001826106c1565b6040516001600160a01b038216907fac6fa858e9350a46cec16539926e0fde25b7629f84b5a72bffaae4df888ae86d90600090a250565b61068a60018261073d565b6040516001600160a01b038216907f80c0b871b97b595b16a7741c1b06fed0c6f6f558639f18ccbce50724325dc40d90600090a250565b6106cb8282610537565b156107185760405162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650060448201526064016102b4565b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6107478282610537565b6107b95760405162461bcd60e51b815260206004820152602160248201527f526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c60448201527f650000000000000000000000000000000000000000000000000000000000000060648201526084016102b4565b6001600160a01b0316600090815260209190915260409020805460ff19169055565b600061010082840312156107ee57600080fd5b50919050565b600080610120838503121561080857600080fd5b61081284846107db565b94610100939093013593505050565b80356001600160a01b038116811461083857600080fd5b919050565b60006020828403121561084f57600080fd5b61085882610821565b9392505050565b60006060828403121561087157600080fd5b6040516060810181811067ffffffffffffffff821117156108bb577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6040529050806108ca83610821565b8152602083013560208201526040830135600581106108e857600080fd5b6040919091015292915050565b6000610100828403121561090857600080fd5b6040516080810181811067ffffffffffffffff82111715610952577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b60405261095e83610821565b815260208301356020820152610977846040850161085f565b60408201526109898460a0850161085f565b60608201529392505050565b6000602082840312156109a757600080fd5b5035919050565b600061010082840312156109c157600080fd5b61085883836107db56fea2646970667358221220f1e8e561b7fdbf8dd74793cc148ca372bec4e2709da862a59159915bd482f14e64736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c8063ac8a584a11610076578063f2fde38b1161005b578063f2fde38b146101f7578063f6419d961461020a578063fb0000c01461022a57600080fd5b8063ac8a584a14610136578063dc10fb0a1461014957600080fd5b8063715018a6116100a7578063715018a6146101005780638da5cb5b146101085780639870d7fe1461012357600080fd5b80633a076e9a146100c35780636d70f7ae146100d8575b600080fd5b6100d66100d13660046107f4565b61023d565b005b6100eb6100e636600461083d565b6102e9565b60405190151581526020015b60405180910390f35b6100d66102fc565b6000546040516001600160a01b0390911681526020016100f7565b6100d661013136600461083d565b610362565b6100d661014436600461083d565b6103c8565b6101e96101573660046108f5565b805160408083015180516020918201516060808701518051908501519785015186517fffffffffffffffffffffffffffffffffffffffff00000000000000000000000098841b89168188015294831b881660348601526048850193909352901b9094166068820152607c810194909452609c808501939093528151808503909301835260bc9093019052805191012090565b6040519081526020016100f7565b6100d661020536600461083d565b61042b565b6101e9610218366004610995565b60026020526000908152604090205481565b6101e96102383660046109ae565b61050a565b610246336102e9565b6102bd5760405162461bcd60e51b815260206004820152603460248201527f4f70657261746f72526f6c653a2063616c6c657220646f6573206e6f7420686160448201527f766520746865204f70657261746f7220726f6c6500000000000000000000000060648201526084015b60405180910390fd5b80600260006102d4610157368790038701876108f5565b81526020810191909152604001600020555050565b60006102f6600183610537565b92915050565b6000546001600160a01b031633146103565760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b61036060006105d5565b565b6000546001600160a01b031633146103bc5760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6103c58161063d565b50565b6000546001600160a01b031633146104225760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6103c58161067f565b6000546001600160a01b031633146104855760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102b4565b6001600160a01b0381166105015760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016102b4565b6103c5816105d5565b6000600281610521610157368690038601866108f5565b8152602001908152602001600020549050919050565b60006001600160a01b0382166105b55760405162461bcd60e51b815260206004820152602260248201527f526f6c65733a206163636f756e7420697320746865207a65726f20616464726560448201527f737300000000000000000000000000000000000000000000000000000000000060648201526084016102b4565b506001600160a01b03166000908152602091909152604090205460ff1690565b600080546001600160a01b038381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6106486001826106c1565b6040516001600160a01b038216907fac6fa858e9350a46cec16539926e0fde25b7629f84b5a72bffaae4df888ae86d90600090a250565b61068a60018261073d565b6040516001600160a01b038216907f80c0b871b97b595b16a7741c1b06fed0c6f6f558639f18ccbce50724325dc40d90600090a250565b6106cb8282610537565b156107185760405162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650060448201526064016102b4565b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6107478282610537565b6107b95760405162461bcd60e51b815260206004820152602160248201527f526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c60448201527f650000000000000000000000000000000000000000000000000000000000000060648201526084016102b4565b6001600160a01b0316600090815260209190915260409020805460ff19169055565b600061010082840312156107ee57600080fd5b50919050565b600080610120838503121561080857600080fd5b61081284846107db565b94610100939093013593505050565b80356001600160a01b038116811461083857600080fd5b919050565b60006020828403121561084f57600080fd5b61085882610821565b9392505050565b60006060828403121561087157600080fd5b6040516060810181811067ffffffffffffffff821117156108bb577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6040529050806108ca83610821565b8152602083013560208201526040830135600581106108e857600080fd5b6040919091015292915050565b6000610100828403121561090857600080fd5b6040516080810181811067ffffffffffffffff82111715610952577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b60405261095e83610821565b815260208301356020820152610977846040850161085f565b60408201526109898460a0850161085f565b60608201529392505050565b6000602082840312156109a757600080fd5b5035919050565b600061010082840312156109c157600080fd5b61085883836107db56fea2646970667358221220f1e8e561b7fdbf8dd74793cc148ca372bec4e2709da862a59159915bd482f14e64736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1540,
+        "contract": "src/marketplace/ExchangeStateV1.sol:ExchangeStateV1",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 1658,
+        "contract": "src/marketplace/ExchangeStateV1.sol:ExchangeStateV1",
+        "label": "_operators",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_struct(Role)2723_storage"
+      },
+      {
+        "astId": 3666,
+        "contract": "src/marketplace/ExchangeStateV1.sol:ExchangeStateV1",
+        "label": "completed",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_bytes32,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_bytes32,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_struct(Role)2723_storage": {
+        "encoding": "inplace",
+        "label": "struct Roles.Role",
+        "members": [
+          {
+            "astId": 2722,
+            "contract": "src/marketplace/ExchangeStateV1.sol:ExchangeStateV1",
+            "label": "bearer",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_bool)"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
