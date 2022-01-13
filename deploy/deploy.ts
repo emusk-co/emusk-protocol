@@ -63,6 +63,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
   });
 
+  const Shiba = await deploy('Shiba', {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
 };
 export default func;
 func.tags = ['all'];

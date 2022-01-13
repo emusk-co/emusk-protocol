@@ -86,6 +86,12 @@ const config: HardhatUserConfig = {
       gasPrice: 56000000000,
       accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
                   process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
+    },
+    ropsten: {
+      url: node_url('ropsten'),
+      chainId: 3,
+      accounts: [ process.env.DEPLOYER_KEY || "",   // 0x3814dE21909d4C14d166898F1a2510DBA0c8702d
+                  process.env.SIGNER_KEY || ""], // 0x80aEa81791Ded20568221346C79B0ad4E0890FAA
     }
     
   },
