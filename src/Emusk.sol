@@ -349,7 +349,7 @@ contract Emusk is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() {
-    _name = "Elon Musk";
+    _name = "Emusk NFT";
     _symbol = "EMUSK";
     _decimals = 18;
     _totalSupply = 10000000000 * 10 ** 18;
