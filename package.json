@@ -1,13 +1,13 @@
 {
-  "name": "xea12-contracts",
+  "name": "emusk-protocol-contracts",
   "version": "0.1.0",
-  "description": "Xea12 smart contract",
+  "description": "emusk-protocol smart contract",
   "private": true,
   "engines": {
     "node": ">= 14.0.0"
   },
-  "repository": "github:xea12com/xea12-contracts",
-  "author": "xea12",
+  "repository": "github:emuskco/emusk-contracts",
+  "author": "emusk",
   "license": "MIT",
   "keywords": [
     "ethereum",

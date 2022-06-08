@@ -13,6 +13,8 @@ const uri = '/ipfs/testhash'
 const supply = 100
 
 async function main() {
+    await DeployAndMintERC1155EMUSK();
+    process.exit(0);
     const [owner, signer] = await ethers.getSigners();
 
     const ProxyFactory = await ethers.getContractFactory("ProxyFactory")

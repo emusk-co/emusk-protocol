@@ -69,21 +69,46 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   //   log: true,
   // });
 
-  const GeniusNFT = await deploy('GeniusNFT', {
-    from: deployer,
-    args: ["Genius NFT", "GNFT", signer, "https://api.emusk.com/contractMetadata/{address}", "https://ipfs.io/"],
-    log: true,
-  });
+  // const GeniusNFT = await deploy('GeniusNFT', {
+  //   from: deployer,
+  //   args: ["Genius NFT", "GNFT", signer, "https://api.emusk.com/contractMetadata/{address}", "https://ipfs.io/"],
+  //   log: true,
+  // });
   
-  const contractAddress = GeniusNFT.address;
-  await hre.run('verify:verify', {
-    address: contractAddress,
-    contract: "src/GeniusNFT.sol:GeniusNFT",
-    constructorArguments: [
-      "Genius NFT", "GNFT", signer, "https://api.emusk.com/contractMetadata/{address}", "https://ipfs.io/"
-    ]
-  });
+  // const contractAddress = GeniusNFT.address;
+  // await hre.run('verify:verify', {
+  //   address: contractAddress,
+  //   contract: "src/GeniusNFT.sol:GeniusNFT",
+  //   constructorArguments: [
+  //     "Genius NFT", "GNFT", signer, "https://api.emusk.com/contractMetadata/{address}", "https://ipfs.io/"
+  //   ]
+  // });
+  
+    // const depositToken = await deploy('MockERC20', {from:deployer, args:[], log: true});
+    // while(!depositToken.address)
+    // {
+    //   await delay(300);
+    //   console.log("---waiting deploying token");
+    // }
+    const depositTokenAddress = "0x0199Bfa055eb910f9D630D25C84381976486c99D";
+    // const TokenPresale = await deploy('TokenPresale', {  from: deployer,  args: [100000000000, depositTokenAddress], log: true,  });
+    // while(!TokenPresale.address)
+    // {
+    //   await delay(300);
+    //   console.log("---waiting deploying presale contract");
+    // }
+    const contractAddress = "0x45F9a836c9Ae0a63DC460195c12740E219819ca3";
+    await hre.run('verify:verify', {
+      address: contractAddress,
+      contract: "src/TokenPresale.sol:TokenPresale",
+      constructorArguments: [100000000000, depositTokenAddress]
+    });
 
 };
+
+function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
 export default func;
 func.tags = ['all'];
